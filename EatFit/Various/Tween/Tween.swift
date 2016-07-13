@@ -22,7 +22,7 @@ class Tween {
 
     var mapper: ((value: CGFloat) -> (AnyObject))?
 
-    init (object: UIView, key: String, from: CGFloat, to: CGFloat, duration: NSTimeInterval) {
+    init (object: UIView, key: String, from: CGFloat, to: CGFloat, duration: TimeInterval) {
         self.object = object
         self.key = key
 
@@ -46,14 +46,14 @@ class Tween {
         layer.startAnimation()
     }
 
-    func start(delay delay: NSTimeInterval) {
+    func start(delay: TimeInterval) {
         self.layer.delay = delay
         start()
     }
 }
 
 extension Tween: TweenLayerDelegate {
-    func tweenLayer(layer: TweenLayer, didSetAnimatableProperty to: CGFloat) {
+    func tweenLayer(_ layer: TweenLayer, didSetAnimatableProperty to: CGFloat) {
         if let mapper = mapper {
             object.setValue(mapper(value: to), forKey: key)
         } else {
@@ -61,34 +61,34 @@ extension Tween: TweenLayerDelegate {
         }
     }
 
-    func tweenLayerDidStopAnimation(layer: TweenLayer) {
+    func tweenLayerDidStopAnimation(_ layer: TweenLayer) {
         layer.removeFromSuperlayer()
     }
 }
 
 protocol TweenLayerDelegate: class {
-    func tweenLayer(layer: TweenLayer, didSetAnimatableProperty to: CGFloat) -> Void
-    func tweenLayerDidStopAnimation(layer: TweenLayer) -> Void
+    func tweenLayer(_ layer: TweenLayer, didSetAnimatableProperty to: CGFloat) -> Void
+    func tweenLayerDidStopAnimation(_ layer: TweenLayer) -> Void
 }
 
-class TweenLayer: CALayer {
+class TweenLayer: CALayer, CAAnimationDelegate {
     @NSManaged private var animatableProperty: CGFloat
 
     var animationDelegate: TweenLayerDelegate?
 
     var from: CGFloat = 0
     var to: CGFloat = 0
-    var tweenDuration: NSTimeInterval = 0
+    var tweenDuration: TimeInterval = 0
     var timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-    var delay: NSTimeInterval = 0
+    var delay: TimeInterval = 0
 
-    override class func needsDisplayForKey(event: String) -> Bool {
-        return event == "animatableProperty" ? true : super.needsDisplayForKey(event)
+    override class func needsDisplay(forKey event: String) -> Bool {
+        return event == "animatableProperty" ? true : super.needsDisplay(forKey: event)
     }
 
-    override func actionForKey(event: String) -> CAAction? {
+    override func action(forKey event: String) -> CAAction? {
         if event != "animatableProperty" {
-            return super.actionForKey(event)
+            return super.action(forKey: event)
         }
 
         let animation = CABasicAnimation(keyPath: event)
@@ -102,12 +102,12 @@ class TweenLayer: CALayer {
         return animation;
     }
 
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         animationDelegate?.tweenLayerDidStopAnimation(self)
     }
 
     override func display() {
-        if let value = presentationLayer()?.animatableProperty {
+        if let value = presentation()?.animatableProperty {
             animationDelegate?.tweenLayer(self, didSetAnimatableProperty: value)
         }
     }

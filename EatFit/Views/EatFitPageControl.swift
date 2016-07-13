@@ -18,7 +18,7 @@ class EatFitPageControl: UIView {
         }
     }
     
-    func selectButton(index:Int) {
+    func selectButton(_ index:Int) {
         if index > (buttons.count - 1) {
             return
         }
@@ -34,7 +34,7 @@ class EatFitPageControl: UIView {
             button.removeFromSuperview()
         }
         
-        buttons.removeAll(keepCapacity: false)
+        buttons.removeAll(keepingCapacity: false)
         
         if pagesCount == 0 {
             return

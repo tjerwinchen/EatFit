@@ -26,7 +26,7 @@ class EatFitSlideViewController: UIViewController {
         }
     }
 
-    var chartColor: UIColor = UIColor.blueColor() {
+    var chartColor: UIColor = UIColor.blue() {
         didSet {
             chartView.chartColor = chartColor
             dropView.color = chartColor
@@ -47,7 +47,7 @@ class EatFitSlideViewController: UIViewController {
     
     var logoImage: UIImage = UIImage() {
         didSet {
-           dropView.logo = logoImage.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+           dropView.logo = logoImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         }
     }
     
@@ -71,7 +71,7 @@ class EatFitSlideViewController: UIViewController {
     }
 
 
-    func animatePercentageLabel (delay delay: NSTimeInterval) {
+    func animatePercentageLabel (delay: TimeInterval) {
         let tween = Tween(object: percentageLabel, key: "text", to: CGFloat(percentage))
 //        let tween = Tween(object: percentageLabel, key: "text", from: 0, to: 50, duration: 3)
 //        tween.timingFunction = CAMediaTimingFunction(controlPoints: 0, 0.4, 0.4, 1)

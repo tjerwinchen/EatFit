@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B5E00361BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00171BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00371BBD570D0030AF3D /* UIView+ACFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00191BBD570D0030AF3D /* UIView+ACFrames.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00201BBD570D0030AF3D /* Tween.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E003B1BBD570D0030AF3D /* ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00241BBD570D0030AF3D /* ACPageController.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003C1BBD570D0030AF3D /* UIPageViewController+ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00261BBD570D0030AF3D /* UIPageViewController+ACPageController.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003D1BBD570E0030AF3D /* UIView+TLKAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00291BBD570D0030AF3D /* UIView+TLKAppearance.m */; settings = {ASSET_TAGS = (); }; };
-		5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00321BBD570D0030AF3D /* DropView.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00341BBD570D0030AF3D /* RoundChartView.swift */; settings = {ASSET_TAGS = (); }; };
-		5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00351BBD570D0030AF3D /* SlideLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		5B5E00361BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00171BBD570D0030AF3D /* CAAnimationGroup + Sequence.swift */; };
+		5B5E00371BBD570D0030AF3D /* UIView+ACFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00191BBD570D0030AF3D /* UIView+ACFrames.m */; };
+		5B5E00381BBD570D0030AF3D /* DIN Alternate Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001C1BBD570D0030AF3D /* DIN Alternate Bold.ttf */; };
+		5B5E00391BBD570D0030AF3D /* DIN Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E001D1BBD570D0030AF3D /* DIN Condensed Bold.ttf */; };
+		5B5E003A1BBD570D0030AF3D /* Tween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00201BBD570D0030AF3D /* Tween.swift */; };
+		5B5E003B1BBD570D0030AF3D /* ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00241BBD570D0030AF3D /* ACPageController.m */; };
+		5B5E003C1BBD570D0030AF3D /* UIPageViewController+ACPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00261BBD570D0030AF3D /* UIPageViewController+ACPageController.m */; };
+		5B5E003D1BBD570E0030AF3D /* UIView+TLKAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00291BBD570D0030AF3D /* UIView+TLKAppearance.m */; };
+		5B5E003E1BBD570E0030AF3D /* EatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002C1BBD570D0030AF3D /* EatFitViewController.swift */; };
+		5B5E003F1BBD570E0030AF3D /* EatFitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E002D1BBD570D0030AF3D /* EatFitViewController.xib */; };
+		5B5E00401BBD570E0030AF3D /* EatFitSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E002F1BBD570D0030AF3D /* EatFitSlideViewController.swift */; };
+		5B5E00411BBD570E0030AF3D /* EatFitSlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E00301BBD570D0030AF3D /* EatFitSlideViewController.xib */; };
+		5B5E00421BBD570E0030AF3D /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00321BBD570D0030AF3D /* DropView.swift */; };
+		5B5E00431BBD570E0030AF3D /* EatFitPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00331BBD570D0030AF3D /* EatFitPageControl.swift */; };
+		5B5E00441BBD570E0030AF3D /* RoundChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00341BBD570D0030AF3D /* RoundChartView.swift */; };
+		5B5E00451BBD570E0030AF3D /* SlideLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E00351BBD570D0030AF3D /* SlideLabel.swift */; };
 		5B6683721B94529400416AC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6683711B94529400416AC3 /* AppDelegate.swift */; };
 		5B6683771B94529400416AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683751B94529400416AC3 /* Main.storyboard */; };
 		5B6683791B94529400416AC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6683781B94529400416AC3 /* Images.xcassets */; };
@@ -315,11 +315,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "aleksey chernish";
 				TargetAttributes = {
 					5B66836B1B94529400416AC3 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -499,6 +500,7 @@
 				PRODUCT_NAME = "EatFit Demo Project";
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoProject/DemoProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -512,6 +514,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "YAL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "EatFit Demo Project";
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoProject/DemoProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

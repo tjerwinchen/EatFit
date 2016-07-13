@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let objects: [ChartObject] = {
         var objects: [ChartObject] = []
         
-        let filePath = NSBundle.mainBundle().pathForResource("Objects", ofType: "plist")
+        let filePath = Bundle.main.pathForResource("Objects", ofType: "plist")
         let contents = NSArray(contentsOfFile: filePath!)! as Array
         
         for dictionary in contents {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             let title = dictionary["title"] as! String
             let description = dictionary["description"] as! String
             let logoName = dictionary["logoName"] as! String
-            let object: ChartObject = ChartObject(color: color, percentage: percentage, title: title, description: description, logoImage: UIImage(named: logoName)!)
+            let object: ChartObject = ChartObject(color: color!, percentage: percentage, title: title, description: description, logoImage: UIImage(named: logoName)!)
             
             objects.append(object)
         }
@@ -39,36 +39,36 @@ class ViewController: UIViewController {
         eatFitController.dataSource = self
         eatFitController.view.frame = self.view.frame
         self.addChildViewController(eatFitController)
-        self.view.tlk_addSubview(eatFitController.view, options: TLKAppearanceOptions.Overlay)
+        self.view.tlk_addSubview(eatFitController.view, options: TLKAppearanceOptions.overlay)
     }
 }
 
 extension ViewController: EatFitViewControllerDataSource {
-    func numberOfPagesForPagingViewController(controller: EatFitViewController) -> Int {
+    func numberOfPagesForPagingViewController(_ controller: EatFitViewController) -> Int {
         return objects.count
     }
 
-    func chartColorForPage(index: Int, forPagingViewController: EatFitViewController) -> UIColor {
+    func chartColorForPage(_ index: Int, forPagingViewController: EatFitViewController) -> UIColor {
         return objects[index].color
     }
 
-    func percentageForPage(index: Int, forPagingViewController: EatFitViewController) -> Int {
+    func percentageForPage(_ index: Int, forPagingViewController: EatFitViewController) -> Int {
         return objects[index].percentage
     }
 
-    func titleForPage(index: Int, forPagingViewController: EatFitViewController) -> String {
+    func titleForPage(_ index: Int, forPagingViewController: EatFitViewController) -> String {
         return objects[index].title
     }
 
-    func descriptionForPage(index: Int, forPagingViewController: EatFitViewController) -> String {
+    func descriptionForPage(_ index: Int, forPagingViewController: EatFitViewController) -> String {
         return objects[index].description
     }
 
-    func logoForPage(index: Int, forPagingViewController: EatFitViewController) -> UIImage {
+    func logoForPage(_ index: Int, forPagingViewController: EatFitViewController) -> UIImage {
         return objects[index].logoImage
     }
 
-    func chartThicknessForPagingViewController(controller: EatFitViewController) -> CGFloat {
+    func chartThicknessForPagingViewController(_ controller: EatFitViewController) -> CGFloat {
         return 15
     }
 }
